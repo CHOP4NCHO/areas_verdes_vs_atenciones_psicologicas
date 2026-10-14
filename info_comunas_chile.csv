@@ -1,0 +1,347 @@
+region,provincia,comuna,habitantes,superficie_km2,densidad
+Región de Arica Parinacota,Arica,Arica,241653,4799.0,50.35
+Región de Arica Parinacota,Arica,Camarones,861,3927.0,0.22
+Región de Arica Parinacota,Parinacota,Putre,1547,5903.0,0.26
+Región de Arica Parinacota,Parinacota,General Lagos,508,2244.0,0.23
+Región de Tarapacá,Iquique,Alto Hospicio,142086,573.0,247.97
+Región de Tarapacá,Iquique,Iquique,199587,2262.0,88.23
+Región de Tarapacá,Tamarugal,Camiña,1335,2200.0,0.61
+Región de Tarapacá,Tamarugal,Colchane,790,4016.0,0.2
+Región de Tarapacá,Tamarugal,Huara,2858,10475.0,0.27
+Región de Tarapacá,Tamarugal,Pica,6272,8934.0,0.7
+Región de Tarapacá,Tamarugal,Pozo Almonte,16878,13766.0,1.23
+Región de Antofagasta,Antofagasta,Antofagasta,401096,30718.0,13.06
+Región de Antofagasta,Antofagasta,Mejillones,14084,3804.0,3.7
+Región de Antofagasta,Antofagasta,Sierra Gorda,1472,12886.0,0.11
+Región de Antofagasta,Antofagasta,Taltal,12097,20405.0,0.59
+Región de Antofagasta,El Loa,Calama,166334,15597.0,10.66
+Región de Antofagasta,El Loa,Ollagüe,256,2964.0,0.09
+Región de Antofagasta,El Loa,S. Pedro de Atacama,9843,23439.0,0.42
+Región de Antofagasta,Tocopilla,Tocopilla,25400,4039.0,6.29
+Región de Antofagasta,Tocopilla,María Elena,4834,12197.0,0.53
+Región de Atacama,Copiapó,Copiapó,168831,16681.0,10.12
+Región de Atacama,Copiapó,Caldera,18805,4667.0,4.03
+Región de Atacama,Copiapó,Tierra Amarilla,11846,11191.0,1.06
+Región de Atacama,Chañaral,Chañaral,12345,5772.0,2.14
+Región de Atacama,Chañaral,Diego De Almagro,11397,18664.0,0.61
+Región de Atacama,Huasco,Vallenar,54222,7084.0,7.65
+Región de Atacama,Huasco,Alto Del Carmen,4788,5939.0,0.81
+Región de Atacama,Huasco,Freirina,7577,3578.0,2.12
+Región de Atacama,Huasco,Huasco,9369,1601.0,5.85
+Región de Coquimbo,Elqui,La Serena,250141,1893.0,132.14
+Región de Coquimbo,Elqui,Coquimbo,263719,1429.0,184.55
+Región de Coquimbo,Elqui,Andacollo,11566,310.0,37.31
+Región de Coquimbo,Elqui,La Higuera,4335,4158.0,1.04
+Región de Coquimbo,Elqui,Paiguano,4649,1495.0,3.11
+Región de Coquimbo,Elqui,Vicuña,28047,7610.0,3.69
+Región de Coquimbo,Choapa,Illapel,32009,2629.0,12.18
+Región de Coquimbo,Choapa,Canela,9639,2197.0,4.39
+Región de Coquimbo,Choapa,Los Vilos,22879,1861.0,12.29
+Región de Coquimbo,Choapa,Salamanca,27823,3445.0,8.08
+Región de Coquimbo,Limari,Ovalle,118696,3835.0,30.95
+Región de Coquimbo,Limari,Combarbalá,12954,1896.0,6.83
+Región de Coquimbo,Limari,Monte Patria,29997,4366.0,6.87
+Región de Coquimbo,Limari,Punitaqui,12076,1339.0,9.02
+Región de Coquimbo,Limari,Río Hurtado,4334,2117.0,2.05
+Región de Valparaíso,Valparaíso,Valparaíso,284938,402.0,708.8
+Región de Valparaíso,Valparaíso,Casablanca,29876,953.0,31.35
+Región de Valparaíso,Valparaíso,Concón,48294,76.0,635.45
+Región de Valparaíso,Valparaíso,Juan Fernández,904,148.0,6.11
+Región de Valparaíso,Valparaíso,Puchuncaví,22539,300.0,75.13
+Región de Valparaíso,Valparaíso,Quintero,35754,148.0,241.58
+Región de Valparaíso,Valparaíso,Viña Del Mar,334871,122.0,2744.04
+Región de Valparaíso,Isla de Pascua,Isla De Pascua,4800,164.0,29.27
+Región de Valparaíso,Los Andes,Los Andes,63440,1248.0,50.83
+Región de Valparaíso,Los Andes,Calle Larga,16597,322.0,51.54
+Región de Valparaíso,Los Andes,Rinconada,11855,123.0,95.38
+Región de Valparaíso,Los Andes,San Esteban,20112,1362.0,14.77
+Región de Valparaíso,Marga Marga,Quilpué,162559,537.0,302.72
+Región de Valparaíso,Marga Marga,Villa Alemana,139571,97.0,1438.88
+Región de Valparaíso,Marga Marga,Limache,56145,294.0,190.97
+Región de Valparaíso,Marga Marga,Olmué,19778,232.0,85.25
+Región de Valparaíso,Petorca,La Ligua,39270,1163.0,33.77
+Región de Valparaíso,Petorca,Cabildo,20015,1455.0,13.76
+Región de Valparaíso,Petorca,Papudo,7561,166.0,45.55
+Región de Valparaíso,Petorca,Petorca,10206,1517.0,6.73
+Región de Valparaíso,Petorca,Zapallar,7980,288.0,27.71
+Región de Valparaíso,Quillota,Quillota,96753,302.0,320.37
+Región de Valparaíso,Quillota,Calera,50631,61.0,830.02
+Región de Valparaíso,Quillota,Hijuelas,19286,267.0,72.23
+Región de Valparaíso,Quillota,La Cruz,24939,78.0,319.73
+Región de Valparaíso,Quillota,Nogales,22136,405.0,54.66
+Región de Valparaíso,San Antonio,San Antonio,96770,405.0,238.94
+Región de Valparaíso,San Antonio,Algarrobo,16076,176.0,91.34
+Región de Valparaíso,San Antonio,Cartagena,24599,246.0,100.0
+Región de Valparaíso,San Antonio,El Quisco,18971,51.0,371.98
+Región de Valparaíso,San Antonio,El Tabo,16260,99.0,164.24
+Región de Valparaíso,San Antonio,Santo Domingo,13171,536.0,24.57
+Región de Valparaíso,San Felipe,San Felipe,80413,186.0,432.33
+Región de Valparaíso,San Felipe,Catemu,13760,362.0,38.01
+Región de Valparaíso,San Felipe,Llaillay,25484,349.0,73.02
+Región de Valparaíso,San Felipe,Panquehue,7269,122.0,59.58
+Región de Valparaíso,San Felipe,Putaendo,17336,1474.0,11.76
+Región de Valparaíso,San Felipe,Santa María,15134,166.0,91.17
+Región de O'Higgins,Cachapoal,Rancagua,257744,260.0,991.32
+Región de O'Higgins,Cachapoal,Codegua,13955,287.0,48.62
+Región de O'Higgins,Cachapoal,Coinco,7916,98.0,80.78
+Región de O'Higgins,Cachapoal,Coltauco,21373,225.0,94.99
+Región de O'Higgins,Cachapoal,Doñihue,21925,78.0,281.09
+Región de O'Higgins,Cachapoal,Graneros,35938,113.0,318.04
+Región de O'Higgins,Cachapoal,Las Cabras,27554,749.0,36.79
+Región de O'Higgins,Cachapoal,Machalí,60875,2586.0,23.54
+Región de O'Higgins,Cachapoal,Malloa,13886,113.0,122.85
+Región de O'Higgins,Cachapoal,Mostazal,27394,524.0,52.28
+Región de O'Higgins,Cachapoal,Olivar,13901,45.0,308.91
+Región de O'Higgins,Cachapoal,Peumo,14243,153.0,93.09
+Región de O'Higgins,Cachapoal,Pichidegua,20363,320.0,63.63
+Región de O'Higgins,Cachapoal,Quinta De Tilcoco,13558,93.0,145.78
+Región de O'Higgins,Cachapoal,Rengo,63620,592.0,107.47
+Región de O'Higgins,Cachapoal,Requínoa,29508,673.0,43.85
+Región de O'Higgins,Cachapoal,San Vicente,49559,476.0,104.12
+Región de O'Higgins,Cardenal Caro,Pichilemu,19847,749.0,26.5
+Región de O'Higgins,Cardenal Caro,La Estrella,4609,435.0,10.6
+Región de O'Higgins,Cardenal Caro,Litueche,8852,619.0,14.3
+Región de O'Higgins,Cardenal Caro,Marchihue,8715,660.0,13.2
+Región de O'Higgins,Cardenal Caro,Navidad,8885,300.0,29.62
+Región de O'Higgins,Cardenal Caro,Paredones,7228,562.0,12.86
+Región de O'Higgins,Colchagua,San Fernando,75585,2441.0,30.96
+Región de O'Higgins,Colchagua,Chépica,15668,503.0,31.15
+Región de O'Higgins,Colchagua,Chimbarongo,37258,498.0,74.82
+Región de O'Higgins,Colchagua,Lolol,7791,597.0,13.05
+Región de O'Higgins,Colchagua,Nancagua,18723,111.0,168.68
+Región de O'Higgins,Colchagua,Palmilla,13060,237.0,55.11
+Región de O'Higgins,Colchagua,Peralillo,12493,283.0,44.14
+Región de O'Higgins,Colchagua,Placilla,9438,147.0,64.2
+Región de O'Higgins,Colchagua,Pumanque,4559,441.0,10.34
+Región de O'Higgins,Colchagua,Santa Cruz,41209,420.0,98.12
+Región del Maule,Talca,Talca,232131,232.0,1000.56
+Región del Maule,Talca,Constitución,47004,1344.0,34.97
+Región del Maule,Talca,Curepto,9519,1074.0,8.86
+Región del Maule,Talca,Empedrado,3990,565.0,7.06
+Región del Maule,Talca,Maule,61081,238.0,256.64
+Región del Maule,Talca,Pelarco,9229,332.0,27.8
+Región del Maule,Talca,Pencahue,9181,957.0,5.59
+Región del Maule,Talca,Río Claro,14276,431.0,33.12
+Región del Maule,Talca,San Clemente,47380,4504.0,10.52
+Región del Maule,Talca,San Rafael,11230,264.0,42.54
+Región del Maule,Cauquenes,Cauquenes,42798,2126.0,20.13
+Región del Maule,Cauquenes,Chanco,9446,530.0,17.82
+Región del Maule,Cauquenes,Pelluhue,8578,371.0,23.12
+Región del Maule,Curico,Curicó,159968,1328.0,120.46
+Región del Maule,Curico,Hualañé,10775,629.0,17.13
+Región del Maule,Curico,Licantén,6892,273.0,25.25
+Región del Maule,Curico,Molina,48949,1552.0,31.54
+Región del Maule,Curico,Rauco,11266,309.0,36.46
+Región del Maule,Curico,Romeral,17233,1597.0,10.79
+Región del Maule,Curico,Sagrada Familia,19427,549.0,35.39
+Región del Maule,Curico,Teno,30113,618.0,48.73
+Región del Maule,Curico,Vichuquén,4716,426.0,11.07
+Región del Maule,Linares,Linares,96744,1466.0,65.99
+Región del Maule,Linares,Colbún,22637,2900.0,7.81
+Región del Maule,Linares,Longaví,33299,1454.0,22.9
+Región del Maule,Linares,Parral,45323,1638.0,27.67
+Región del Maule,Linares,Retiro,22310,827.0,26.98
+Región del Maule,Linares,San Javier,49559,1313.0,37.74
+Región del Maule,Linares,Villa Alegre,17919,190.0,94.31
+Región del Maule,Linares,Yerbas Buenas,20035,262.0,76.47
+Región de Ñuble,Diguillín,Chillán,190382,511.0,372.57
+Región de Ñuble,Diguillín,Bulnes,23863,425.0,56.15
+Región de Ñuble,Diguillín,Chillán Viejo,32688,292.0,111.95
+Región de Ñuble,Diguillín,El Carmen,13186,664.0,19.86
+Región de Ñuble,Diguillín,Pemuco,8930,563.0,15.86
+Región de Ñuble,Diguillín,Pinto,12502,1164.0,10.74
+Región de Ñuble,Diguillín,Quillón,19165,423.0,45.31
+Región de Ñuble,Diguillín,San Ignacio,17405,364.0,47.82
+Región de Ñuble,Diguillín,Yungay,18680,824.0,22.67
+Región de Ñuble,Punilla,San Carlos,55847,874.0,63.9
+Región de Ñuble,Punilla,Coihueco,29766,1777.0,16.75
+Región de Ñuble,Punilla,ñiquén,12797,493.0,25.96
+Región de Ñuble,Punilla,San Fabián,5245,1568.0,3.35
+Región de Ñuble,Punilla,San Nicolás,15099,491.0,30.75
+Región de Ñuble,Itata,Quirihue,11746,589.0,19.94
+Región de Ñuble,Itata,Cobquecura,5495,570.0,9.64
+Región de Ñuble,Itata,Coelemu,15895,342.0,46.48
+Región de Ñuble,Itata,Ninhue,5763,401.0,14.37
+Región de Ñuble,Itata,Portezuelo,5203,282.0,18.45
+Región de Ñuble,Itata,Ránquil,6508,248.0,26.24
+Región de Ñuble,Itata,Treguaco,6124,313.0,19.57
+Región del Bíobío,Concepción,Concepción,230375,222.0,1037.73
+Región del Bíobío,Concepción,Coronel,123648,279.0,443.18
+Región del Bíobío,Concepción,Chiguayante,85822,72.0,1191.97
+Región del Bíobío,Concepción,Florida,12958,609.0,21.28
+Región del Bíobío,Concepción,Hualqui,25795,531.0,48.58
+Región del Bíobío,Concepción,Lota,39980,136.0,293.97
+Región del Bíobío,Concepción,Penco,48971,108.0,453.44
+Región del Bíobío,Concepción,San Pedro de La Paz,150992,113.0,1336.21
+Región del Bíobío,Concepción,Santa Juana,14947,731.0,20.45
+Región del Bíobío,Concepción,Talcahuano,147322,92.0,1601.33
+Región del Bíobío,Concepción,Tomé,56907,495.0,114.96
+Región del Bíobío,Concepción,Hualpén,87731,54.0,1624.65
+Región del Bíobío,Arauco,Lebu,25246,561.0,45.0
+Región del Bíobío,Arauco,Arauco,37163,956.0,38.87
+Región del Bíobío,Arauco,Cañete,34640,760.0,45.58
+Región del Bíobío,Arauco,Contulmo,5905,962.0,6.14
+Región del Bíobío,Arauco,Curanilahue,31119,994.0,31.31
+Región del Bíobío,Arauco,Los álamos,21950,599.0,36.64
+Región del Bíobío,Arauco,Tirúa,10208,624.0,16.36
+Región del Bíobío,Biobío,Los ángeles,219441,1748.0,125.54
+Región del Bíobío,Biobío,Antuco,4373,1884.0,2.32
+Región del Bíobío,Biobío,Cabrero,31256,640.0,48.84
+Región del Bíobío,Biobío,Laja,23706,340.0,69.72
+Región del Bíobío,Biobío,Mulchén,29036,1925.0,15.08
+Región del Bíobío,Biobío,Nacimiento,26140,935.0,27.96
+Región del Bíobío,Biobío,Negrete,10723,157.0,68.3
+Región del Bíobío,Biobío,Quilaco,4440,1124.0,3.95
+Región del Bíobío,Biobío,Quilleco,9700,1122.0,8.65
+Región del Bíobío,Biobío,San Rosendo,3575,92.0,38.86
+Región del Bíobío,Biobío,Santa Bárbara,14075,1255.0,11.22
+Región del Bíobío,Biobío,Tucapel,15729,915.0,17.19
+Región del Bíobío,Biobío,Yumbel,23170,727.0,31.87
+Región del Bíobío,Biobío,Alto Biobío,6016,2125.0,2.83
+Región de La Araucanía,Malleco,Angol,53022,1194.0,44.41
+Región de La Araucanía,Malleco,Collipulli,24303,1296.0,18.75
+Región de La Araucanía,Malleco,Curacautín,18536,1664.0,11.14
+Región de La Araucanía,Malleco,Ercilla,7730,500.0,15.46
+Región de La Araucanía,Malleco,Lonquimay,10247,3914.0,2.62
+Región de La Araucanía,Malleco,Los Sauces,7348,850.0,8.64
+Región de La Araucanía,Malleco,Lumaco,9253,1119.0,8.27
+Región de La Araucanía,Malleco,Purén,12184,465.0,26.2
+Región de La Araucanía,Malleco,Renaico,10686,267.0,40.02
+Región de La Araucanía,Malleco,Traiguén,18873,908.0,20.79
+Región de La Araucanía,Malleco,Victoria,34464,1256.0,27.44
+Región de La Araucanía,Cautín,Temuco,292518,464.0,630.43
+Región de La Araucanía,Cautín,Carahue,24957,1341.0,18.61
+Región de La Araucanía,Cautín,Cunco,19177,1907.0,10.06
+Región de La Araucanía,Cautín,Curarrehue,7733,1171.0,6.6
+Región de La Araucanía,Cautín,Freire,26164,935.0,27.98
+Región de La Araucanía,Cautín,Galvarino,12710,568.0,22.38
+Región de La Araucanía,Cautín,Gorbea,14148,695.0,20.36
+Región de La Araucanía,Cautín,Lautaro,41936,901.0,46.54
+Región de La Araucanía,Cautín,Loncoche,25158,977.0,25.75
+Región de La Araucanía,Cautín,Melipeuco,6796,1107.0,6.14
+Región de La Araucanía,Cautín,Nueva Imperial,33988,733.0,46.37
+Región de La Araucanía,Cautín,Padre Las Casas,80656,401.0,201.14
+Región de La Araucanía,Cautín,Perquenco,7438,331.0,22.47
+Región de La Araucanía,Cautín,Pitrufquén,27041,581.0,46.54
+Región de La Araucanía,Cautín,Pucón,32321,1249.0,25.88
+Región de La Araucanía,Cautín,Saavedra,12877,401.0,32.11
+Región de La Araucanía,Cautín,Teodoro Schmidt,15639,650.0,24.06
+Región de La Araucanía,Cautín,Toltén,10041,860.0,11.68
+Región de La Araucanía,Cautín,Vilcún,31575,1421.0,22.22
+Región de La Araucanía,Cautín,Villarrica,67737,1291.0,52.47
+Región de La Araucanía,Cautín,Cholchol,13167,428.0,30.76
+Región de Los Ríos,Valdivia,Valdivia,170043,1016.0,167.37
+Región de Los Ríos,Valdivia,Corral,5501,767.0,7.17
+Región de Los Ríos,Valdivia,Lanco,16876,532.0,31.72
+Región de Los Ríos,Valdivia,Los Lagos,21431,1791.0,11.97
+Región de Los Ríos,Valdivia,Máfil,8074,583.0,13.85
+Región de Los Ríos,Valdivia,Mariquina,22973,1321.0,17.39
+Región de Los Ríos,Valdivia,Paillaco,19802,896.0,22.1
+Región de Los Ríos,Valdivia,Panguipulli,35098,3292.0,10.66
+Región de Los Ríos,Ranco,Futrono,15635,2121.0,7.37
+Región de Los Ríos,Ranco,La Unión,38907,2137.0,18.21
+Región de Los Ríos,Ranco,Lago Ranco,10527,1763.0,5.97
+Región de Los Ríos,Ranco,Río Bueno,33363,2212.0,15.08
+Región de Los Lagos,Llanquihue,Puerto Montt,277040,1673.0,165.59
+Región de Los Lagos,Llanquihue,Calbuco,36474,591.0,61.72
+Región de Los Lagos,Llanquihue,Cochamó,4199,3911.0,1.07
+Región de Los Lagos,Llanquihue,Fresia,12320,1278.0,9.64
+Región de Los Lagos,Llanquihue,Frutillar,22554,831.0,27.14
+Región de Los Lagos,Llanquihue,Los Muermos,17162,1246.0,13.77
+Región de Los Lagos,Llanquihue,Llanquihue,18088,421.0,42.96
+Región de Los Lagos,Llanquihue,Maullín,15063,861.0,17.49
+Región de Los Lagos,Llanquihue,Puerto Varas,52942,4065.0,13.02
+Región de Los Lagos,Chiloe,Castro,46997,473.0,99.36
+Región de Los Lagos,Chiloe,Ancud,40949,1752.0,23.37
+Región de Los Lagos,Chiloe,Chonchi,16078,1362.0,11.8
+Región de Los Lagos,Chiloe,Curaco De Vélez,3662,80.0,45.78
+Región de Los Lagos,Chiloe,Dalcahue,14894,1239.0,12.02
+Región de Los Lagos,Chiloe,Puqueldón,4048,97.0,41.73
+Región de Los Lagos,Chiloe,Queilén,5690,333.0,17.09
+Región de Los Lagos,Chiloe,Quellón,28460,3244.0,8.77
+Región de Los Lagos,Chiloe,Quemchi,8409,440.0,19.11
+Región de Los Lagos,Chiloe,Quinchao,7678,161.0,47.69
+Región de Los Lagos,Osorno,Osorno,166455,951.0,175.03
+Región de Los Lagos,Osorno,Puerto Octay,8865,1796.0,4.94
+Región de Los Lagos,Osorno,Purranque,19542,1459.0,13.39
+Región de Los Lagos,Osorno,Puyehue,11712,1598.0,7.33
+Región de Los Lagos,Osorno,Río Negro,13874,1266.0,10.96
+Región de Los Lagos,Osorno,S. Juan de La Costa,7776,1517.0,5.13
+Región de Los Lagos,Osorno,San Pablo,10883,637.0,17.08
+Región de Los Lagos,Palena,Chaitén,4025,8471.0,0.48
+Región de Los Lagos,Palena,Futaleufú,3062,1280.0,2.39
+Región de Los Lagos,Palena,Hualaihué,9480,2788.0,3.4
+Región de Los Lagos,Palena,Palena,1903,2764.0,0.69
+Región de Aysén,Coyhaique,Coyhaique,57823,7290.0,7.93
+Región de Aysén,Coyhaique,Lago Verde,779,5422.0,0.14
+Región de Aysén,Aysén,Aysén,23170,29796.0,0.78
+Región de Aysén,Aysén,Cisnes,5137,16093.0,0.32
+Región de Aysén,Aysén,Guaitecas,1598,620.0,2.58
+Región de Aysén,Capitán Prat,Cochrane,3458,8599.0,0.4
+Región de Aysén,Capitán Prat,O'higgins,647,8182.0,0.08
+Región de Aysén,Capitán Prat,Tortel,505,19710.0,0.03
+Región de Aysén,General Carrera,Chile Chico,4905,5737.0,0.85
+Región de Aysén,General Carrera,Río Ibáñez,2723,5997.0,0.45
+Región de Magallanes,Magallanes,Punta Arenas,132363,17846.0,7.42
+Región de Magallanes,Magallanes,Laguna Blanca,269,3696.0,0.07
+Región de Magallanes,Magallanes,Río Verde,102,17248.0,0.01
+Región de Magallanes,Magallanes,San Gregorio,241,6884.0,0.04
+Región de Magallanes,Antártica Chilena,Cabo De Hornos,1750,21551.0,0.08
+Región de Magallanes,Antártica Chilena,Antártica,60,,
+Región de Magallanes,Tierra del Fuego,Porvenir,6809,9707.0,0.7
+Región de Magallanes,Tierra del Fuego,Primavera,431,6530.0,0.07
+Región de Magallanes,Tierra del Fuego,Timaukel,157,10759.0,0.01
+Región de Magallanes,Ultima Esperanza,Natales,24152,49924.0,0.48
+Región de Magallanes,Ultima Esperanza,Torres Ddel Paine,203,6630.0,0.03
+Región de Metropolitana,Santiago,Santiago,438856,22.0,19948.0
+Región de Metropolitana,Santiago,Cerrillos,85041,21.0,4049.57
+Región de Metropolitana,Santiago,Cerro Navia,127250,11.0,11568.18
+Región de Metropolitana,Santiago,Conchalí,121587,11.0,11053.36
+Región de Metropolitana,Santiago,El Bosque,155257,14.0,11089.79
+Región de Metropolitana,Santiago,Estación Central,181049,14.0,12932.07
+Región de Metropolitana,Santiago,Huechuraba,101808,45.0,2262.4
+Región de Metropolitana,Santiago,Independencia,116943,7.0,16706.14
+Región de Metropolitana,Santiago,La Cisterna,103157,10.0,10315.7
+Región de Metropolitana,Santiago,La Florida,374836,71.0,5279.38
+Región de Metropolitana,Santiago,La Granja,112022,10.0,11202.2
+Región de Metropolitana,Santiago,La Pintana,175421,31.0,
+Región de Metropolitana,Santiago,La Reina,89870,23.0,3907.39
+Región de Metropolitana,Santiago,Las Condes,296134,99.0,2991.25
+Región de Metropolitana,Santiago,Lo Barnechea,112620,1024.0,109.98
+Región de Metropolitana,Santiago,Lo Espejo,87295,7.0,12470.71
+Región de Metropolitana,Santiago,Lo Prado,91290,7.0,13041.43
+Región de Metropolitana,Santiago,Macul,123800,13.0,9523.08
+Región de Metropolitana,Santiago,Maipú,503635,133.0,3786.73
+Región de Metropolitana,Santiago,Ñuñoa,241467,17.0,14203.94
+Región de Metropolitana,Santiago,Pedro Aguirre Cerda,96062,10.0,9606.2
+Región de Metropolitana,Santiago,Peñalolén,236478,54.0,4379.22
+Región de Metropolitana,Santiago,Providencia,143974,14.0,10283.86
+Región de Metropolitana,Santiago,Pudahuel,227820,197.0,1156.45
+Región de Metropolitana,Santiago,Quilicura,205624,58.0,3545.24
+Región de Metropolitana,Santiago,Quinta Normal,129351,12.0,10779.25
+Región de Metropolitana,Santiago,Recoleta,154615,16.0,9663.44
+Región de Metropolitana,Santiago,Renca,143622,24.0,5984.25
+Región de Metropolitana,Santiago,San Joaquín,95602,10.0,9560.2
+Región de Metropolitana,Santiago,San Miguel,150829,10.0,15082.9
+Región de Metropolitana,Santiago,San Ramón,76002,7.0,10857.43
+Región de Metropolitana,Santiago,Vitacura,86420,28.0,3086.43
+Región de Metropolitana,Cordillera,Puente Alto,568086,88.0,6455.52
+Región de Metropolitana,Cordillera,Pirque,29060,445.0,65.3
+Región de Metropolitana,Cordillera,San José de Maipo,17441,4995.0,3.49
+Región de Metropolitana,Chacabuco,Colina,173293,971.0,178.47
+Región de Metropolitana,Chacabuco,Lampa,145160,452.0,321.15
+Región de Metropolitana,Chacabuco,Tiltil,19742,653.0,30.23
+Región de Metropolitana,Maipo,San Bernardo,306371,155.0,1976.59
+Región de Metropolitana,Maipo,Buin,116969,214.0,546.58
+Región de Metropolitana,Maipo,Calera de Tango,25491,73.0,349.19
+Región de Metropolitana,Maipo,Paine,78828,678.0,116.27
+Región de Metropolitana,Melipilla,Melipilla,136325,1345.0,101.36
+Región de Metropolitana,Melipilla,Alhué,7768,845.0,9.19
+Región de Metropolitana,Melipilla,Curacaví,35165,693.0,50.74
+Región de Metropolitana,Melipilla,María Pinto,15352,395.0,38.87
+Región de Metropolitana,Melipilla,San Pedro,11108,788.0,14.1
+Región de Metropolitana,Talagante,Talagante,76429,126.0,606.58
+Región de Metropolitana,Talagante,El Monte,37497,118.0,317.77
+Región de Metropolitana,Talagante,Isla de Maipo,39274,189.0,207.8
+Región de Metropolitana,Talagante,Padre Hurtado,81243,81.0,1003.0
+Región de Metropolitana,Talagante,Peñaflor,94402,69.0,1368.14

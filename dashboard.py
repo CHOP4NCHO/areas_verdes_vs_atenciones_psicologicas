@@ -351,62 +351,116 @@ with tab_general:
 with tab_corr:
     st.header("Análisis de Correlación: Áreas Verdes vs. Psicología")
 
-    st.markdown(
-        """
-        > **Hallazgos Clave de la Investigación:**
-        > * **Asociación Positiva Significativa:** Existe una correlación lineal positiva fuerte ($r = 0.716$, $p < 0.001$) y una correlación de Spearman de $\rho = 0.798$ entre la superficie total de áreas verdes de un Servicio de Salud y la demanda/cobertura de atenciones psicológicas.
-        > * **Concentración Territorial:** Jurisdicciones como *Maule*, *Metropolitano Sur Oriente* y *Metropolitano Occidente* destacan por concentrar simultáneamente los mayores volúmenes de atenciones psicológicas (superando las 900.000 atenciones acumuladas en 2020-2024) y amplias coberturas de áreas verdes (330 a 480 ha).
-        > * **Distribución por Nivel Asistencial:** La atención psicológica se concentra predominantemente en el Nivel Primario (64.7%), seguido del Nivel Secundario (34.3%), mientras que Urgencias representa solo el 1.0%.
-        """
+    st.caption(
+        "Evaluación de la relación entre la disponibilidad de áreas verdes "
+        "y la participación relativa de atenciones psicológicas (% respecto al total de atenciones de salud) "
+        "en cada Servicio de Salud."
     )
 
-    # Filtrar psicología y excluir SNSS
-    df_psico = df[(df["tipo"] == PSICO) & (df["servicio_salud"] != "SNSS")]
-    psico_ss = (
-        df_psico.groupby("servicio_salud")["valor"]
-        .sum()
-        .rename("atenciones_psicologia")
-        .reset_index()
-    )
-    df_corr = pd.merge(psico_ss, df_av, on="servicio_salud", how="inner")
+    # Selector de métrica de áreas verdes
+    col_sel, _ = st.columns([3, 2])
+    with col_sel:
+        metrica_av = st.radio(
+            "Métrica de áreas verdes para el análisis:",
+            options=[
+                "m² por habitante (comunas censadas)",
+                "m² por habitante (total servicio)",
+                "Hectáreas brutas",
+            ],
+            index=0,
+            horizontal=True,
+            help=(
+                "m² por habitante (comunas censadas): estándar OMS calculado sobre las comunas que tienen catastro vecinal (evita dilución rural). "
+                "m² por habitante (total servicio): m² de áreas verdes sobre la población total de la red de salud. "
+                "Hectáreas brutas: superficie total registrada de áreas verdes."
+            ),
+        )
+
+    if metrica_av == "m² por habitante (comunas censadas)":
+        col_x = "m2_hab_comunas_con_datos"
+        label_x = "Áreas Verdes por Habitante (comunas censadas)"
+        unit_x = "m²/hab"
+        tooltip_fmt = ".2f"
+    elif metrica_av == "m² por habitante (total servicio)":
+        col_x = "m2_hab_total_servicio"
+        label_x = "Áreas Verdes por Habitante (total servicio)"
+        unit_x = "m²/hab"
+        tooltip_fmt = ".2f"
+    else:
+        col_x = "total_area_verde_ha"
+        label_x = "Superficie de Áreas Verdes"
+        unit_x = "ha"
+        tooltip_fmt = ",.1f"
+
+    # Filtrar excluyendo SNSS y calcular métricas por servicio de salud
+    df_base = df[df["servicio_salud"] != "SNSS"]
+    stats_ss = agg_by_servicio(df_base)
+    df_corr = pd.merge(stats_ss, df_av, on="servicio_salud", how="inner")
 
     # Métricas de correlación dinámicas
     # ponytail: rank().corr() calcula Spearman exacto sin requerir scipy
-    if len(df_corr) >= 2 and df_corr["total_area_verde_ha"].std() > 0 and df_corr["atenciones_psicologia"].std() > 0:
-        r_val = float(df_corr["total_area_verde_ha"].corr(df_corr["atenciones_psicologia"]))
-        rho_val = float(df_corr["total_area_verde_ha"].rank().corr(df_corr["atenciones_psicologia"].rank()))
+    if len(df_corr) >= 2 and df_corr[col_x].std() > 0 and df_corr["pct_psicologia"].std() > 0:
+        r_val = float(df_corr[col_x].corr(df_corr["pct_psicologia"]))
+        rho_val = float(df_corr[col_x].rank().corr(df_corr["pct_psicologia"].rank()))
         r_str, rho_str = f"{r_val:.3f}", f"{rho_val:.3f}"
     else:
         r_str, rho_str = "—", "—"
 
-    total_psico_analizadas = int(df_corr["atenciones_psicologia"].sum())
+    tot_psico = int(df_corr["atenciones_psicologia"].sum())
+    tot_all = int(df_corr["total_atenciones"].sum())
+    pct_global_corr = (tot_psico / tot_all * 100) if tot_all > 0 else 0.0
     total_ha = float(df_corr["total_area_verde_ha"].sum())
+    total_m2 = float(df_corr["total_area_verde_m2"].sum())
 
     # KPIs
     k1, k2, k3, k4 = st.columns(4)
     k1.metric("Correlación de Pearson (r)", r_str)
     k2.metric("Correlación de Spearman (ρ)", rho_str)
-    k3.metric("Total Atenciones Psicológicas", f"{total_psico_analizadas:,.0f}")
-    k4.metric("Superficie Total Áreas Verdes", f"{total_ha:,.1f} ha")
+    k3.metric("% Psicología vs Otros servicios", f"{pct_global_corr:.2f}%")
+    if unit_x == "m²/hab":
+        if col_x == "m2_hab_comunas_con_datos":
+            tot_hab_censados = int(df_corr["habitantes_comunas_con_datos"].sum())
+            val_ponderado = (total_m2 / tot_hab_censados) if tot_hab_censados > 0 else 0.0
+            k4.metric(
+                "Promedio Ponderado Censado",
+                f"{val_ponderado:.2f} m²/hab",
+                help=f"Sobre {tot_hab_censados:,.0f} habitantes en comunas con unidades vecinales catastradas.",
+            )
+        else:
+            tot_hab_totales = int(df_corr["total_habitantes"].sum())
+            val_ponderado = (total_m2 / tot_hab_totales) if tot_hab_totales > 0 else 0.0
+            k4.metric(
+                "Promedio Ponderado Total",
+                f"{val_ponderado:.2f} m²/hab",
+                help=f"Sobre {tot_hab_totales:,.0f} habitantes de toda la red nacional.",
+            )
+    else:
+        k4.metric("Superficie Total Áreas Verdes", f"{total_ha:,.1f} ha")
 
     # Gráficos
     st.subheader("Dispersión con Línea de Tendencia")
     scatter_base = alt.Chart(df_corr).encode(
-        x=alt.X("total_area_verde_ha:Q", title="Superficie de Áreas Verdes (Hectáreas)"),
-        y=alt.Y("atenciones_psicologia:Q", title="Total Atenciones Psicológicas"),
+        x=alt.X(f"{col_x}:Q", title=f"{label_x} ({unit_x})"),
+        y=alt.Y("pct_psicologia:Q", title="% Psicología sobre Total de Atenciones"),
     )
     scatter_pts = scatter_base.mark_circle(size=85, color="#1f77b4").encode(
         tooltip=[
             alt.Tooltip("servicio_salud:N", title="Servicio de Salud"),
+            alt.Tooltip("m2_hab_comunas_con_datos:Q", title="m²/hab (censado)", format=".2f"),
+            alt.Tooltip("m2_hab_total_servicio:Q", title="m²/hab (total servicio)", format=".2f"),
             alt.Tooltip("total_area_verde_ha:Q", title="Áreas Verdes (ha)", format=",.1f"),
+            alt.Tooltip("habitantes_comunas_con_datos:Q", title="Habitantes censados", format=",.0f"),
+            alt.Tooltip("total_habitantes:Q", title="Habitantes totales", format=",.0f"),
+            alt.Tooltip("pct_psicologia:Q", title="% Psicología", format=".2f"),
             alt.Tooltip("atenciones_psicologia:Q", title="At. Psicología", format=",.0f"),
+            alt.Tooltip("total_atenciones:Q", title="Total Atenciones", format=",.0f"),
         ]
     )
     scatter_labels = scatter_base.mark_text(
         align="left", baseline="middle", dx=7, fontSize=11
     ).encode(text="servicio_salud:N")
     scatter_trend = scatter_base.transform_regression(
-        "total_area_verde_ha", "atenciones_psicologia"
+        col_x, "pct_psicologia"
     ).mark_line(color="#e45756", strokeDash=[4, 4], size=2)
 
     st.altair_chart(
@@ -414,24 +468,28 @@ with tab_corr:
         use_container_width=True,
     )
 
-    st.subheader("Ranking Comparativo: Atenciones Psicológicas vs. Áreas Verdes")
-    order = df_corr.sort_values("atenciones_psicologia", ascending=False)["servicio_salud"].tolist()
+    st.subheader(f"Ranking Comparativo: % Psicología vs. {label_x}")
+    order = df_corr.sort_values("pct_psicologia", ascending=False)["servicio_salud"].tolist()
     chart_h = max(len(df_corr) * 22, 250)
 
     b1 = alt.Chart(df_corr).mark_bar(color="#4c78a8").encode(
         y=alt.Y("servicio_salud:N", sort=order, title="Servicio de Salud"),
-        x=alt.X("atenciones_psicologia:Q", title="Atenciones Psicológicas"),
+        x=alt.X("pct_psicologia:Q", title="% Psicología"),
         tooltip=[
             alt.Tooltip("servicio_salud:N", title="Servicio"),
+            alt.Tooltip("pct_psicologia:Q", title="% Psicología", format=".2f"),
             alt.Tooltip("atenciones_psicologia:Q", title="At. Psicología", format=",.0f"),
+            alt.Tooltip("total_atenciones:Q", title="Total At.", format=",.0f"),
         ],
     ).properties(height=chart_h)
 
     b2 = alt.Chart(df_corr).mark_bar(color="#55a868").encode(
         y=alt.Y("servicio_salud:N", sort=order, axis=None),
-        x=alt.X("total_area_verde_ha:Q", title="Áreas Verdes (ha)"),
+        x=alt.X(f"{col_x}:Q", title=f"{label_x} ({unit_x})"),
         tooltip=[
             alt.Tooltip("servicio_salud:N", title="Servicio"),
+            alt.Tooltip("m2_hab_comunas_con_datos:Q", title="m²/hab (censado)", format=".2f"),
+            alt.Tooltip("m2_hab_total_servicio:Q", title="m²/hab (total)", format=".2f"),
             alt.Tooltip("total_area_verde_ha:Q", title="Áreas Verdes (ha)", format=",.1f"),
         ],
     ).properties(height=chart_h)
@@ -440,19 +498,46 @@ with tab_corr:
 
     with st.expander("Tabla de Datos Consolidados"):
         st.dataframe(
-            df_corr.sort_values("atenciones_psicologia", ascending=False)[
-                ["servicio_salud", "atenciones_psicologia", "total_area_verde_ha", "total_area_verde_m2", "total_unidades_vecinales"]
+            df_corr.sort_values("pct_psicologia", ascending=False)[
+                [
+                    "servicio_salud",
+                    "pct_psicologia",
+                    "m2_hab_comunas_con_datos",
+                    "m2_hab_total_servicio",
+                    "total_area_verde_ha",
+                    "habitantes_comunas_con_datos",
+                    "total_habitantes",
+                    "comunas_con_datos",
+                    "total_comunas",
+                    "total_unidades_vecinales",
+                    "atenciones_psicologia",
+                    "total_atenciones",
+                ]
             ].rename(columns={
                 "servicio_salud": "Servicio de Salud",
-                "atenciones_psicologia": "Atenciones Psicología",
+                "pct_psicologia": "% Psicología",
+                "m2_hab_comunas_con_datos": "m²/hab (Censado)",
+                "m2_hab_total_servicio": "m²/hab (Total)",
                 "total_area_verde_ha": "Áreas Verdes (ha)",
-                "total_area_verde_m2": "Áreas Verdes (m²)",
+                "habitantes_comunas_con_datos": "Habitantes Censados",
+                "total_habitantes": "Habitantes Totales",
+                "comunas_con_datos": "Comunas Censadas",
+                "total_comunas": "Total Comunas",
                 "total_unidades_vecinales": "Unidades Vecinales",
+                "atenciones_psicologia": "At. Psicología",
+                "total_atenciones": "Total Atenciones",
             }).style.format({
-                "Atenciones Psicología": "{:,.0f}",
+                "% Psicología": "{:.2f}%",
+                "m²/hab (Censado)": "{:.2f}",
+                "m²/hab (Total)": "{:.2f}",
                 "Áreas Verdes (ha)": "{:,.1f}",
-                "Áreas Verdes (m²)": "{:,.0f}",
+                "Habitantes Censados": "{:,.0f}",
+                "Habitantes Totales": "{:,.0f}",
+                "Comunas Censadas": "{:,.0f}",
+                "Total Comunas": "{:,.0f}",
                 "Unidades Vecinales": "{:,.0f}",
+                "At. Psicología": "{:,.0f}",
+                "Total Atenciones": "{:,.0f}",
             }),
             use_container_width=True,
             hide_index=True,
